@@ -1,0 +1,18 @@
+<ion-header>
+  <main-header [title]="title"></main-header>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <h1 text-center>
+        The Flashlight is {{isOn ? "ON" : "OFF"}}
+    </h1>
+    <ion-row justify-content-center margin-vertical>
+        <button ion-button round outline icon-only (tap)="switchToggle()">
+            <ion-icon name="power"></ion-icon>
+          </button>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

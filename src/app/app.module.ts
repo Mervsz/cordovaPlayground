@@ -1,19 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SQLite } from '@ionic-native/sqlite';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Flashlight } from '@ionic-native/flashlight';
+import { File } from '@ionic-native/file';
+import { GithubServiceProvider } from '../providers/github-service/github-service';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
   ],
   imports: [
     BrowserModule,
@@ -22,13 +22,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+    Flashlight,
+    File,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GithubServiceProvider,
+    SQLite,
+  ],
 })
 export class AppModule {}

@@ -1,0 +1,45 @@
+<!--
+  Generated template for the FileGeneratorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <main-header [title]="title"></main-header>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="dbCreate()">
+    <h2>Create DB</h2>
+  </button>
+  <button ion-button (click)="fileCheck()">
+    <h2>Check File</h2>
+  </button>
+  <button ion-button (click)="getFile()">
+    <h2>Get File</h2>
+  </button>
+  <button ion-button (click)="createFile()">
+    <h2>Create File</h2>
+  </button>
+  <button ion-button (click)="readFile()">
+    <h2>Readt File</h2>
+  </button>
+  <button ion-button (click)="customCreate()">
+    <h2>Custom Create</h2>
+  </button>
+  <button ion-button (click)="dbPersonNames()">
+    <h2>Select Persons</h2>
+  </button>
+  <button ion-button (click)="exportDB()">
+    <h2>Export DB</h2>
+  </button>
+
+
+      <ion-item *ngFor="let p of persons">
+        <ion-label>{{p.name}}</ion-label>
+        <ion-label>{{p.age}}</ion-label>
+        <ion-label>{{p.address}}</ion-label>
+      </ion-item>
+
+
+</ion-content>

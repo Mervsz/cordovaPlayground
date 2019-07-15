@@ -1,0 +1,30 @@
+<!--
+  Generated template for the TestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <main-header [title]="title"></main-header>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        Enter your personal info
+      </ion-card-header>
+        <ion-item>
+          <ion-label>Height: </ion-label> 
+          <ion-input [(ngModel)]="height" placeholder="Input height" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Weight: </ion-label>
+          <ion-input [(ngModel)]="weight"  placeholder="Input height" type="text"></ion-input>
+        </ion-item>
+
+        <button ion-button block (click)="checkBMI(weight,height)">Calculate BMI</button>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
